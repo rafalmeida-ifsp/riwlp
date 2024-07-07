@@ -98,6 +98,10 @@ p {
   background-color: #fff;
 }
 
+.contact h2{
+  text-align: center;
+}
+
 .contact form {
   max-width: 600px;
   margin: 0 auto;
