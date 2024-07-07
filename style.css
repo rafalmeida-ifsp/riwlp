@@ -23,7 +23,7 @@ p {
 }
 
 .hero {
-  background-image: url('hero.jpg');
+  background-image: url('images/dc.jpg');
   background-size: cover;
   background-position: center;
   padding: 100px 0;
