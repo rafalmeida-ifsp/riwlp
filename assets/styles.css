@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  font-family: Roboto, Arial, sans-serif;
+  /* font-size: 62.5%; */
+  --background-color-1: #01161e;
+  --background-color-2: #124559;
+  --background-color-3: #598392;
+  --color-text-1: #cccaca;
+  --link-color-1: var(--color-text-1);
+  --link-color-2: #6b9080;
+}
+
+* {
+  box-sizing: border-box;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  font: inherit;
+  color: inherit;
+}
+
+body {
+  background-color: var(--background-color-2);
+}
+
+/* --------------- HEADER --------------- */
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background-color: var(--background-color-1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 28px;
+  color: var(--color-text-1);
+  font-weight: 600;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #1c282e;
+}
+
+span {
+  color: #161718;
+  -webkit-text-stroke-color: #9db6c2;
+}
+
+.navbar-links a {
+  font-size: 18px;
+  color: var(--link-color-1);
+  margin-left: 35px;
+  transition: 0.3s;
+}
+
+.navbar-links a:hover,
+.navbar-links a.active {
+  color: var(--link-color-2);
+}
+
+/* --------------- HOME --------------- */
+.card-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: url("./background.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* opacity : 0.2; */
+}
+
+.card-home-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  font-weight: 500;
+  color: var(--color-text-1);
+}
+
+.card-home-content h1 {
+  font-size: 62px;
+}
+
+.card-home-content h3 {
+  font-size: 35px;
+}
+
+/* --------------- CONTENT --------------- */
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 105px 0;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.card-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 35px;
+  color: var(--color-text-1);
+}
+
+.card-title {
+  font-size: 48px;
+}
+.card-content {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 22px;
+}
+
+.card.primary {
+  background-color: var(--background-color-3);
+}
+.card.secondary {
+  background-color: var(--background-color-2);
+}
+
+/* --------------- CONTATO --------------- */
+.card-contato {
+  align-items: center;
+  font-size: 25px;
+  gap: 30px;
+}
+
+.card-contato .btn-contato {
+  background-color: var(--background-color-1);
+  color: var(--link-color-1);
+  border: 2px solid transparent;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 9px 22px;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.card-contato .btn-contato:hover {
+  background-color: transparent;
+  color: var(--background-color-1);
+  border: 2px solid var(--background-color-1);
+  cursor: pointer;
+}
