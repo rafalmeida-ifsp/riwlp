@@ -1,83 +1,149 @@
+*{
+  font-family: "montserrat", sans-serif;
+}
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: #E7ECEF;
 }
 
 header {
-  background-color: #333;
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 550px;
+    background-image: linear-gradient(to right top, #0329da, #2e26df, #4421e3, #561be7, #6612eb);
+    width: 100%;
+    gap: 5px;
+}
+
+header img{
+   height: 400px;
+}
+
+.header-title{
+  padding-top: 50px;
+  
+  margin-right: 60px;
+}
+
+.header-title p{
+  font-size: 20px;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px; 
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  margin-top: 60px;
 }
 
 h1 {
+  color:#f7f7f7;
+  font-family: "Montserrat", sans-serif;
   font-size: 32px;
   margin: 0;
 }
 
 p {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.5;
+  color: #fff;
 }
 
 .hero {
-  background-image: url('hero.jpg');
-  background-size: cover;
+  display: flex;
+  gap: 20px;
   background-position: center;
   padding: 100px 0;
   text-align: center;
   color: #fff;
+  margin-left:40px;
+  margin-right:40px;
 }
 
-.hero h2 {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
 
-.hero p {
-  font-size: 20px;
-  max-width: 600px;
+.hero-text{
+  max-width: 1000px;
+  width: 20px;
   margin: 0 auto;
 }
 
-.hero .btn {
-  background-color: #007bff;
+.hero h2 {
+  font-family: "montserrat";
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #0032b2;
+}
+
+.hero p {
+  font-size: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom:30px; 
+  color:#0032b2;
+}
+
+.hero .btn-contact {
+  background-color: #0027fb;
   color: #fff;
-  padding: 12px 20px;
+  
+  padding: 15px 25px;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
-.hero .btn:hover {
-  background-color: #0056b3;
+.hero .btn-contact:hover {
+  background-color: #a3cef1;
+}
+.slider-img{
+  background-color: rgb(92, 82, 154);
+  width: 50%;
+}
+
+.slider-img{
+  
+  width: 5000px;
+}
+.slider-text{
+  background-color: rgb(8, 124, 124);
 }
 
 .services {
+  background-color: #ffffff;
   padding: 40px 0;
   text-align: center;
+  color: #0027fb;
 }
 
 .services ul {
   list-style: none;
   padding: 0;
-}
-
-.services li {
-  display: inline-block;
   margin: 0 20px;
 }
 
+.services li {
+  padding: 10px;
+  background-color:  #0027fb;
+  margin-bottom: 10px;
+  border-radius: 2px;
+  color: #ffffff;
+}
+
 .benefits {
-  background-color: #f0f0f0;
+  background-color: #0027fb;
   padding: 40px 0;
 }
 
 .benefits h2 {
   text-align: center;
   margin-bottom: 20px;
+  color: #ffffff;
 }
 
 .benefits ul {
@@ -91,13 +157,19 @@ p {
   border: 1px solid #ddd;
   margin-bottom: 10px;
   border-radius: 5px;
+  color: #ddd;
 }
 
 .contact {
   padding: 40px 0;
-  background-color: #fff;
+  background-color: #f4f4f4;
 }
 
+.contact h2{
+  text-align: center;
+  margin-bottom: 20px;
+  color: #0027fb;
+}
 .contact form {
   max-width: 600px;
   margin: 0 auto;
@@ -121,13 +193,14 @@ p {
   height: 150px;
 }
 
-.contact button {
-  background-color: #007bff;
+ .btn-contact-form {
+  background-color: #0027fb;;
   color: #fff;
   padding: 12px 20px;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s;
+  text-align: center;
 }
 
 .contact button:hover {
@@ -136,8 +209,12 @@ p {
 
 .map {
   padding: 40px 0;
+  margin: 50px;
 }
 
+.map h2{
+  color: #0027fb;
+}
 .map iframe {
   width: 100%;
   height: 450px;
@@ -145,8 +222,41 @@ p {
 }
 
 footer {
-  background-color: #333;
+  background-color: #0027fb;
   color: #fff;
   padding: 20px 0;
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero {
+      flex-direction: row;
+      text-align: left;
+  }
+
+  .hero img {
+      width: 50%;
+      margin-right: 1rem;
+  }
+
+  .services ul, .benefits ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+
+  .services li, .benefits li {
+      width: calc(0% - 1rem);
+      margin: 0.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero img {
+      width: 40%;
+  }
+
+  .services li, .benefits li {
+      width: calc(33.33% - 1rem);
+  }
 }
