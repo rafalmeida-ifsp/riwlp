@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agradecimento pelo Contato</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+            line-height: 1.6;
+        }
+        .user-info {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f1f1f1;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Obrigado pelo seu contato!</h1>
+        <p>Agradecemos por nos enviar sua mensagem. Aqui estão os detalhes que recebemos:</p>
+        <div class="user-info">
+            <p class="name"><strong>Nome:</strong> </p>
+            <p class="email"><strong>Email:</strong></p>
+            <p class="message"><strong>Mensagem:</strong></p>
+        </div>
+        <p>Em breve entraremos em contato com você.</p>
+    </div>
+    <script>
+        var urlAtual = window.location.href;
+        var urlClass = new URL(urlAtual);
+        var name = urlClass.searchParams.get("name");
+        var email = urlClass.searchParams.get("email");
+        var message = urlClass.searchParams.get("message");
+        
+
+        document.getElementsByClassName("name")[0].innerText = name
+        document.getElementsByClassName("email")[0].innerText = email
+        document.getElementsByClassName("message")[0].innerText = message
+    </script>
+</body>
+</html>
