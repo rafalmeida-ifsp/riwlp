@@ -1,0 +1,28 @@
+#h2{
+ font-family: Arial, Helvetica, sans-serif;
+}
+
+#nav ul {
+    padding-left: 10%;
+    font-family: sans-serif;
+ }
+
+#nav ol{
+    padding-left: 10%;
+    font-family: sans-serif;
+}
+
+#nav dl{
+    padding-left: 35%;
+    font-family: sans-serif;
+}
+
+p {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+#icones img{
+    height: 40px;
+    width: 40px;
+}

@@ -1,8 +1,23 @@
+
+a {
+    font-size: 40px;
+    padding: 400px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+  }
+
+h1 {
+  text-align: center;
+  font-size: 60px;
+  padding: 10px;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: #48d9d9;
 }
 
 header {
